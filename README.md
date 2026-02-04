@@ -1,28 +1,43 @@
-# 02 — Windows SOC Monitoring (Auth + Endpoint Telemetry)
+# 02 — Windows SOC Monitoring
+## Enterprise Windows Security Monitoring (Splunk-Based)
 
-> **Goal:** Build SOC Level 1 job-ready evidence — alert triage, investigation, documentation, and escalation decisions.
+This repository focuses on enterprise Windows security monitoring within an Active Directory environment.
 
-## What this repo shows
-- Practical SOC workflow (monitor → triage → investigate → enrich → document → escalate/close)
-- Repeatable templates/playbooks
-- Evidence artifacts (screenshots, logs, queries, timelines)
+The objective is to demonstrate detection and investigation of:
 
-## Quick links
-- 📁 Investigations: `./investigations/`
-- 🧭 Playbooks: `./playbooks/`
-- 🧾 IOC Lists: `./iocs/`
+- Privilege escalation
+- Unauthorized group membership changes
+- Suspicious authentication activity
+- Account abuse
+- Lateral movement indicators
 
-## Scope
-- Windows authentication monitoring (brute force, password spray patterns)
-- Privilege and group membership changes
-- Suspicious process execution (PowerShell, LOLBins concepts)
-- Investigation writeups + escalation decisions
+All investigations follow structured corporate SOC documentation standards.
 
-## Minimum deliverables
-- 5+ Windows-focused investigations
-- 2 playbooks (Auth anomaly, Suspicious process)
-- Cheatsheets: Event IDs + what they mean (basic)
+---
 
-## Investigation index
-- [INV-001 — <Title>](./investigations/INV-001-<title>.md)
+# 🏢 Simulated Enterprise Environment
 
+- Windows Server 2019 Domain Controllers
+- Windows 10/11 Endpoints
+- Active Directory Domain
+- Splunk Enterprise log aggregation
+- EDR telemetry integration
+
+---
+
+# 🔎 Investigation Index
+
+| Case ID | Incident Type | Severity | Status |
+|---------|--------------|----------|--------|
+| SOC-2026-003 | Unauthorized Domain Admin Addition | High | Escalated |
+| SOC-2026-004 | Suspicious Service Account Activity | Medium | Contained |
+
+---
+
+# 📌 Skills Demonstrated
+
+- Windows Event ID analysis
+- Active Directory security monitoring
+- Privilege escalation detection
+- SPL query writing
+- Enterprise escalation workflow
